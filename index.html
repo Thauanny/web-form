@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Usuários</h1>
+        <form id="form">
+            <label for="nome"><b>Nome:</b></label>
+            <input type="text" id="nome" required>
+            <label for="cpf"><b>CPF:</b></label>
+            <input type="text" id="cpf" required oninput="mascaraCPF(this)" maxlength="14" minlength="14">
+            <label for="dataNascimento"><b>Data de Nascimento:</b></label>
+            <input type="date" id="dataNascimento" required>
+            <label for="endereco"><b>Endereço:</b></label>
+            <input type="text" id="endereco" required>
+            <button type="submit"><b>Cadastrar</b></button>
+        </form>
+        <div class="actions">
+            <button onclick="exibir()">Exibir Contatos</button>
+            <button onclick="buscar()">Buscar Contato</button>
+            <button onclick="excluir()">Excluir Contato</button>
+        </div>
+        <br>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
